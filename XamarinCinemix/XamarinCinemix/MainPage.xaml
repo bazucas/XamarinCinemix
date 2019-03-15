@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:XamarinCinemix"
+             x:Class="XamarinCinemix.MainPage">
+
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout>
+                <StackLayout Style="{StaticResource Head}">
+                    <Label Text="Cinemix" Style="{StaticResource AppTitle}" />
+                    <Label Text="Your movie app" Style="{StaticResource AppSubtitle}" />
+                </StackLayout>
+                <StackLayout Style="{StaticResource Content}">
+                    <Label Text="New Movies" Style="{StaticResource NewMovie}" />
+                    <Label Text="Black Panther" Style="{StaticResource MovieTitle}" />
+
+                    <Grid>
+
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
+
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                        </Grid.RowDefinitions>
+                        <Image Source="Fundo.png" Style="{StaticResource Background}" Grid.ColumnSpan="2" Grid.Row="0"
+                               Grid.Column="0" />
+                        <StackLayout Grid.ColumnSpan="2" Grid.Row="0" Grid.Column="0">
+                            <Image Source="Poster.png" Style="{StaticResource Poster}" />
+                            <Label
+                                Text="Thousands of years ago, five African tribes war over a meteorite containing vibranium. One warrior ingests a 'heart-shaped herb' affected by the metal and gains superhuman abilities, becoming the first 'Black Panther'. He unites all but the Jabari Tribe to form the nation of Wakanda. Over centuries, the Wakandans use the vibranium to develop advanced technology and isolate themselves from the world by posing as a Third World country. In 1992, Wakanda's King T'Chaka visits his brother N'Jobu, who is working undercover in Oakland, California. T'Chaka accuses N'Jobu of assisting black-market arms dealer Ulysses Klaue with stealing vibranium from Wakanda. N'Jobu's partner reveals he is Zuri, another undercover Wakandan, and confirms T'Chaka's suspicions.
+                        In the present day, following T'Chaka's death,[N 1] his son T'Challa returns to Wakanda to assume the throne."
+                                Style="{StaticResource Plot}" />
+                            <StackLayout Style="{StaticResource Schedules}">
+                                <StackLayout Style="{StaticResource Schedule}">
+                                    <Label Text="10h30" TextColor="White" />
+                                </StackLayout>
+                                <StackLayout Style="{StaticResource Schedule}">
+                                    <Label Text="10h30" TextColor="White" />
+                                </StackLayout>
+                                <StackLayout Style="{StaticResource Schedule}">
+                                    <Label Text="10h30" TextColor="White" />
+                                </StackLayout>
+                                <StackLayout Style="{StaticResource Schedule}">
+                                    <Label Text="10h30" TextColor="White" />
+                                </StackLayout>
+                            </StackLayout>
+                        </StackLayout>
+                        <Image Grid.ColumnSpan="2" Source="FundoValor.png" Grid.Row="1" Grid.Column="0"
+                               HorizontalOptions="Center" />
+                        <StackLayout HorizontalOptions="End" Grid.Row="1" Grid.Column="0" Spacing="0" Padding="10">
+                            <Label Text="Half" Style="{StaticResource AppSubtitle}" />
+                            <Label Text="15 $usd" Style="{StaticResource AppTitle}" />
+                        </StackLayout>
+                        <StackLayout HorizontalOptions="Start" Grid.Row="1" Grid.Column="1" Spacing="0" Padding="10">
+                            <Label Text="Full" Style="{StaticResource AppSubtitle}" />
+                            <Label Text="30 $usd" Style="{StaticResource AppTitle}" />
+                        </StackLayout>
+                    </Grid>
+
+                </StackLayout>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>
